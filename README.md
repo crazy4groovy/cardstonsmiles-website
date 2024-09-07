@@ -1,11 +1,5 @@
 # cardstonsmiles.com
 
-This is the source code for cardstonsmiles.com.
+This is the test site for Cardston Smiles.
 
-## Development
-
-1. Install dependencies:
-
-```bash
-npm install
-```
+Go to [public test site homepage](./public/)

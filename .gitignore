@@ -1,5 +1,5 @@
 # build output
-dist/ # leave in for github pages
+dist/
 
 # generated types
 .astro/

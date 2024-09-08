@@ -8,7 +8,6 @@ export default defineConfig({
   output: 'static',
   build: {
     assets: 'assets',
-    outDir: 'public2', // This will build your project into the public folder
   },
   server: {
     port: 3000,

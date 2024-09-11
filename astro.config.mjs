@@ -6,9 +6,7 @@ import react from '@astrojs/react';
 export default defineConfig({
   site: 'https://cardstonsmiles.com',
   output: 'static',
-  build: {
-    assets: 'assets',
-  },
+  build: {},
   server: {
     port: 3000,
     host: true,

@@ -30,6 +30,8 @@ jobs:
         run: |
           npm install
           npm run build
+          # list the files in the dist folder
+          ls -la dist
 
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages

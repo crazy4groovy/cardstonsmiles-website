@@ -2,17 +2,19 @@
 import Main from "../layouts/Main.astro";
 import Header from "../components/Header.astro";
 import HeroInner from "../components/HeroInner.astro";
-import BlogList from "../components/BlogList.astro";
+import ContactForm from "../components/ContactForm.astro";
+import ContactInfo from "../components/ContactInfo.astro";
 import Footer from "../components/Footer.astro";
 ---
 
 <Main>
   <Header />
   <HeroInner
-    title="Blog"
-    breadcrumbs={[{name: "Home", url: "/"}, {name: "Blog"}]}
+    title="Contact Us"
+    breadcrumbs={[{name: "Home", url: "/"}, {name: "Contact"}]}
     backgroundImage="images/bg_1.jpg"
   />
-  <BlogList />
+  <ContactForm />
+  <ContactInfo />
   <Footer />
 </Main>

@@ -1,0 +1,22 @@
+---
+import Main from "../layouts/Main.astro";
+import Header from "../components/Header.astro";
+import HeroInner from "../components/HeroInner.astro";
+import AboutSection from "../components/AboutSection.astro";
+import CallToAction from "../components/CallToAction.astro";
+import Testimonials from "../components/Testimonials.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Main>
+  <Header />
+  <HeroInner
+    title="About Us"
+    breadcrumbs={[{name: "Home", url: "/"}, {name: "About us"}]}
+    backgroundImage="images/bg_1.jpg"
+  />
+  <AboutSection />
+  <CallToAction />
+  <Testimonials />
+  <Footer />
+</Main>

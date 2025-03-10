@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "sirv": "^2.0.4"
+  }
+}

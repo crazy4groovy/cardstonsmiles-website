@@ -1,0 +1,163 @@
+---
+import Main from '../layouts/Main.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<Main>
+  <Header />
+
+  <!-- <section class="hero-wrap hero-wrap-2" style="background-image: url('/images/bg_1.jpg');">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text align-items-center justify-content-center">
+        <div class="col-md-9 text-center ftco-animate">
+          <h1 class="mb-2 bread">New Patients</h1>
+          <p class="breadcrumbs"><span class="mr-2"><a href="/">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>New Patients</span></p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="ftco-section ftco-no-pt ftco-no-pb">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-10 text-center py-1 my-3 ftco-animate">
+          <div class="welcome-banner p-5 shadow-lg rounded" style="background-color: #f8f9fa;">
+            <h2 class="mb-0 font-weight-bold" style="color: #24b776; font-size: 2.5rem;">
+              We Are Accepting New Patients!
+            </h2>
+            <p class="mt-3">Schedule your first appointment today and discover why Cardston Smiles is the right choice for your dental care.</p>
+            <a href="/contact" class="btn btn-primary py-3 px-4 mt-3">Book Your Appointment</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ftco-section">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-2">
+        <div class="col-md-8 text-center heading-section ftco-animate">
+          <div class="icon mb-3">
+            <span class="flaticon-shiny-tooth" style="font-size: 3rem; color: #24b776;"></span>
+          </div>
+          <h2 class="mb-4">What to Expect as a New Patient</h2>
+          <p>We understand visiting a new dental office can be intimidating. Here's what you can expect during your first visit with us.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="card shadow-sm w-100">
+            <div class="card-body d-flex flex-column">
+              <div class="icon mb-3">
+                <span class="flaticon-tooth-with-braces" style="font-size: 3rem; color: #24b776;"></span>
+              </div>
+              <h3 class="heading">Upon Arrival</h3>
+              <div class="faq-content">
+                <p>Our friendly front desk team will welcome you with a smile and guide you through the check-in process:</p>
+                <ul>
+                  <li>Please arrive 15 minutes before your scheduled appointment</li>
+                  <li>Bring your ID, insurance information, and completed new patient forms (or fill them out upon arrival)</li>
+                  <li>Our team will verify your information and answer any initial questions</li>
+                  <li>Enjoy our comfortable waiting area with complimentary beverages</li>
+                </ul>
+                <p>We strive to minimize wait times and ensure a pleasant experience from the moment you walk through our doors.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="card shadow-sm w-100">
+            <div class="card-body d-flex flex-column">
+              <div class="icon mb-3">
+                <span class="flaticon-tooth" style="font-size: 3rem; color: #24b776;"></span>
+              </div>
+              <h3 class="heading">During Your Exam</h3>
+              <div class="faq-content">
+                <p>Your first dental exam with us will be thorough and informative:</p>
+                <ul>
+                  <li>Review of your medical and dental history</li>
+                  <li>Full set of digital X-rays to identify any issues not visible during visual examination</li>
+                  <li>Comprehensive oral examination of teeth, gums, and surrounding tissues</li>
+                  <li>Oral cancer screening for your peace of mind</li>
+                  <li>Assessment of your bite and jaw alignment</li>
+                  <li>Professional cleaning by our gentle hygienist (unless a different treatment plan is needed)</li>
+                </ul>
+                <p>Our dentist will explain findings in easy-to-understand terms and answer all your questions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="card shadow-sm w-100">
+            <div class="card-body d-flex flex-column">
+              <div class="icon mb-3">
+                <span class="flaticon-dentist-chair" style="font-size: 3rem; color: #24b776;"></span>
+              </div>
+              <h3 class="heading">Treatment Planning</h3>
+              <div class="faq-content">
+                <p>After your examination, we'll create a personalized plan for your ongoing care:</p>
+                <ul>
+                  <li>Discussion of findings and recommended treatments</li>
+                  <li>Visual aids and digital images to help you understand any dental issues</li>
+                  <li>Prioritization of treatments based on urgency and your preferences</li>
+                  <li>Transparent cost estimates and insurance coverage information</li>
+                  <li>Scheduling of follow-up appointments as needed</li>
+                </ul>
+                <p>We believe in collaborative decision-making – you'll never feel pressured into treatments. Our goal is to provide you with the information you need to make confident choices about your dental health.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ftco-section ftco-no-pt ftco-no-pb bg-light">
+    <div class="container">
+      <div class="row d-flex justify-content-center py-5">
+        <div class="col-md-8 text-center heading-section ftco-animate">
+          <h2 class="mb-4">Have Additional Questions?</h2>
+          <p>We're here to make your transition to our practice as smooth as possible. Contact our friendly team for any additional questions or to schedule your first appointment.</p>
+          <a href="/contact" class="btn btn-primary py-3 px-4 mt-3">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Main>
+
+<style>
+  .welcome-banner {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .welcome-banner:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+  }
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: none;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15) !important;
+  }
+  .faq-content {
+    flex-grow: 1;
+  }
+  .faq-content ul {
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .faq-content li {
+    margin-bottom: 0.5rem;
+  }
+</style>

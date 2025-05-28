@@ -1,0 +1,366 @@
+---
+const onlyDentists = Astro.props.onlyDentists || false;
+---
+
+<section class="ftco-section">
+  <div class="container">
+    <!-- Our Dentists Section -->
+    <div class="row justify-content-center mb-5 pb-3">
+      <div class="col-md-7 heading-section ftco-animate text-center">
+        <h2 class="mb-4">Our Dentists</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-4 ftco-animate">
+        <div class="staff">
+          <div class="img-wrap d-flex align-items-stretch">
+            <div
+              class="img align-self-stretch"
+              style="background-image: url(images/doc-1.jpg);"
+            >
+            </div>
+          </div>
+          <div class="text pt-3 text-center">
+            <h3>Dr. Dustin Michel</h3>
+            <span class="position mb-2">Dentist</span>
+            <div class="faded">
+              <p>
+                Prolonged exposure to our office may lead to a healthy smile, but no guarantees on the jokes. Come for the fillings, stay for the dad jokes!
+              </p>
+              <ul class="ftco-social text-center">
+                <li class="ftco-animate">
+                  <a
+                    href="#"
+                    class="d-flex align-items-center justify-content-center"
+                    ><span class="icon-twitter"></span></a
+                  >
+                </li>
+                <li class="ftco-animate">
+                  <a
+                    href="#"
+                    class="d-flex align-items-center justify-content-center"
+                    ><span class="icon-facebook"></span></a
+                  >
+                </li>
+                <li class="ftco-animate">
+                  <a
+                    href="#"
+                    class="d-flex align-items-center justify-content-center"
+                    ><span class="icon-google-plus"></span></a
+                  >
+                </li>
+                <li class="ftco-animate">
+                  <a
+                    href="#"
+                    class="d-flex align-items-center justify-content-center"
+                    ><span class="icon-instagram"></span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 ftco-animate">
+        <div class="staff">
+          <div class="img-wrap d-flex align-items-stretch">
+            <div
+              class="img align-self-stretch"
+              style="background-image: url(images/doc-2.jpg);"
+            >
+            </div>
+          </div>
+          <div class="text pt-3 text-center">
+            <h3>Dr. Armes Perrett</h3>
+            <span class="position mb-2">Dentist</span>
+            <div class="faded">
+              <p>
+                By night, a superhero fighting tooth decay and villainous plaque. Our office is equipped with the latest in dental tech and a strong Wi-Fi signal. Appointments available. No cape required.
+              </p>
+              <ul class="ftco-social text-center">
+                <li class="ftco-animate">
+                  <a
+                    href="#"
+                    class="d-flex align-items-center justify-content-center"
+                    ><span class="icon-twitter"></span></a
+                  >
+                </li>
+                <li class="ftco-animate">
+                  <a
+                    href="#"
+                    class="d-flex align-items-center justify-content-center"
+                    ><span class="icon-facebook"></span></a
+                  >
+                </li>
+                <li class="ftco-animate">
+                  <a
+                    href="#"
+                    class="d-flex align-items-center justify-content-center"
+                    ><span class="icon-google-plus"></span></a
+                  >
+                </li>
+                <li class="ftco-animate">
+                  <a
+                    href="#"
+                    class="d-flex align-items-center justify-content-center"
+                    ><span class="icon-instagram"></span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 ftco-animate">
+        <div class="staff">
+          <div class="img-wrap d-flex align-items-stretch">
+            <div
+              class="img align-self-stretch"
+              style="background-image: url(images/doc-3.jpg);"
+            >
+            </div>
+          </div>
+          <div class="text pt-3 text-center">
+            <h3>Dr. Michael French</h3>
+            <span class="position mb-2">Dentist</span>
+            <div class="faded">
+              <p>
+                When not fixing teeth, I'm probably trying to fix my golf swing or perfecting my cookie-baking skills. Book an appointment and let's get your smile (and my baking skills) on track!"
+              </p>
+              <ul class="ftco-social text-center">
+                <li class="ftco-animate">
+                  <a
+                    href="#"
+                    class="d-flex align-items-center justify-content-center"
+                    ><span class="icon-twitter"></span></a
+                  >
+                </li>
+                <li class="ftco-animate">
+                  <a
+                    href="#"
+                    class="d-flex align-items-center justify-content-center"
+                    ><span class="icon-facebook"></span></a
+                  >
+                </li>
+                <li class="ftco-animate">
+                  <a
+                    href="#"
+                    class="d-flex align-items-center justify-content-center"
+                    ><span class="icon-google-plus"></span></a
+                  >
+                </li>
+                <li class="ftco-animate">
+                  <a
+                    href="#"
+                    class="d-flex align-items-center justify-content-center"
+                    ><span class="icon-instagram"></span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {!onlyDentists && (
+      <>
+        <!-- Our Staff Section -->
+        <div class="row justify-content-center mb-5 pb-3 mt-5">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+            <h2 class="mb-4">Our Staff</h2>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Dental Assistants -->
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="staff">
+              <div class="img-wrap d-flex align-items-stretch">
+                <div
+                  class="img align-self-stretch"
+                  style="background-image: url(images/doc-4.jpg);"
+                >
+                </div>
+              </div>
+              <div class="text pt-3 text-center">
+                <h3>Paula Brown</h3>
+                <span class="position mb-2">Dental Assistant</span>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="staff">
+              <div class="img-wrap d-flex align-items-stretch">
+                <div
+                  class="img align-self-stretch"
+                  style="background-image: url(images/doc-5.jpg);"
+                >
+                </div>
+              </div>
+              <div class="text pt-3 text-center">
+                <h3>Randee Wilde</h3>
+                <span class="position mb-2">Dental Assistant</span>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="staff">
+              <div class="img-wrap d-flex align-items-stretch">
+                <div
+                  class="img align-self-stretch"
+                  style="background-image: url(images/doc-6.jpg);"
+                >
+                </div>
+              </div>
+              <div class="text pt-3 text-center">
+                <h3>Melissa MacKenzie</h3>
+                <span class="position mb-2">Dental Assistant</span>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="staff">
+              <div class="img-wrap d-flex align-items-stretch">
+                <div
+                  class="img align-self-stretch"
+                  style="background-image: url(images/doc-7.jpg);"
+                >
+                </div>
+              </div>
+              <div class="text pt-3 text-center">
+                <h3>Sheila Lowry</h3>
+                <span class="position mb-2">Dental Assistant</span>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="staff">
+              <div class="img-wrap d-flex align-items-stretch">
+                <div
+                  class="img align-self-stretch"
+                  style="background-image: url(images/doc-8.jpg);"
+                >
+                </div>
+              </div>
+              <div class="text pt-3 text-center">
+                <h3>Lyndee Wynder</h3>
+                <span class="position mb-2">Dental Assistant</span>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Dental Hygienists -->
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="staff">
+              <div class="img-wrap d-flex align-items-stretch">
+                <div
+                  class="img align-self-stretch"
+                  style="background-image: url(images/doc-1.jpg);"
+                >
+                </div>
+              </div>
+              <div class="text pt-3 text-center">
+                <h3>Heber Keeler</h3>
+                <span class="position mb-2">Dental Hygienist</span>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="staff">
+              <div class="img-wrap d-flex align-items-stretch">
+                <div
+                  class="img align-self-stretch"
+                  style="background-image: url(images/doc-2.jpg);"
+                >
+                </div>
+              </div>
+              <div class="text pt-3 text-center">
+                <h3>Gabby Stone</h3>
+                <span class="position mb-2">Dental Hygienist</span>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="staff">
+              <div class="img-wrap d-flex align-items-stretch">
+                <div
+                  class="img align-self-stretch"
+                  style="background-image: url(images/doc-3.jpg);"
+                >
+                </div>
+              </div>
+              <div class="text pt-3 text-center">
+                <h3>Shelby West</h3>
+                <span class="position mb-2">Dental Hygienist</span>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Coordinators -->
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="staff">
+              <div class="img-wrap d-flex align-items-stretch">
+                <div
+                  class="img align-self-stretch"
+                  style="background-image: url(images/doc-4.jpg);"
+                >
+                </div>
+              </div>
+              <div class="text pt-3 text-center">
+                <h3>Carrie Little</h3>
+                <span class="position mb-2"
+                  >Treatment/Financial/Scheduling Coordinator</span
+                >
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="staff">
+              <div class="img-wrap d-flex align-items-stretch">
+                <div
+                  class="img align-self-stretch"
+                  style="background-image: url(images/doc-5.jpg);"
+                >
+                </div>
+              </div>
+              <div class="text pt-3 text-center">
+                <h3>Shannon Bridge</h3>
+                <span class="position mb-2"
+                  >Treatment/Financial/Scheduling Coordinator</span
+                >
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="staff">
+              <div class="img-wrap d-flex align-items-stretch">
+                <div
+                  class="img align-self-stretch"
+                  style="background-image: url(images/doc-6.jpg);"
+                >
+                </div>
+              </div>
+              <div class="text pt-3 text-center">
+                <h3>Nicki Thompson</h3>
+                <span class="position mb-2"
+                  >Treatment/Financial/Scheduling Coordinator</span
+                >
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    )}
+  </div>
+</section>

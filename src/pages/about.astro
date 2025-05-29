@@ -3,7 +3,7 @@ import Main from "../layouts/Main.astro";
 import Header from "../components/Header.astro";
 import HeroInner from "../components/HeroInner.astro";
 import AboutSection from "../components/AboutSection.astro";
-import CallToAction from "../components/CallToAction.astro";
+import CTAFreeConsultation from "../components/CTAFreeConsultation.astro";
 import Testimonials from "../components/Testimonials.astro";
 import Footer from "../components/Footer.astro";
 ---
@@ -12,11 +12,11 @@ import Footer from "../components/Footer.astro";
   <Header />
   <HeroInner
     title="About Us"
-    breadcrumbs={[{name: "Home", url: "/"}, {name: "About us"}]}
+    breadcrumbs={[{ name: "Home", url: "/" }, { name: "About us" }]}
     backgroundImage="images/bg_1.jpg"
   />
   <AboutSection />
-  <CallToAction />
+  <CTAFreeConsultation />
   <Testimonials />
   <Footer />
 </Main>

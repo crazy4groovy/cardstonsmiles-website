@@ -1,0 +1,87 @@
+---
+import Card from "../utils/Card.astro";
+
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  faqs: FAQItem[];
+}
+
+const { faqs } = Astro.props;
+---
+
+<section class="ftco-section">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-2">
+      <div class="col-md-8 text-center heading-section ftco-animate">
+        <div class="icon mb-3">
+          <span class="flaticon-tooth" style="font-size: 3rem; color: #24b776;"
+          ></span>
+        </div>
+        <h2 class="mb-4">Frequently Asked Questions</h2>
+        <p>
+          Find answers to common questions about visiting our dental practice
+          for the first time.
+        </p>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="faq-accordion">
+          {
+            faqs.map((faq, index) => (
+              <Card question={faq.question} answer={faq.answer} index={index} />
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // FAQ functionality with proper toggle behavior
+  document.addEventListener("DOMContentLoaded", function () {
+    const faqButtons = document.querySelectorAll("[data-faq-toggle]");
+
+    faqButtons.forEach((button) => {
+      button.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const targetId = this.getAttribute("data-faq-toggle");
+        const targetCollapse = document.getElementById(targetId);
+        const isExpanded = this.getAttribute("aria-expanded") === "true";
+
+        // Close all other FAQ items
+        faqButtons.forEach((otherButton) => {
+          if (otherButton !== this) {
+            const otherTargetId = otherButton.getAttribute("data-faq-toggle");
+            const otherCollapse = document.getElementById(otherTargetId);
+            otherButton.setAttribute("aria-expanded", "false");
+            if (otherCollapse) {
+              otherCollapse.classList.remove("show");
+            }
+          }
+        });
+
+        // Toggle current item
+        if (isExpanded) {
+          this.setAttribute("aria-expanded", "false");
+          if (targetCollapse) {
+            targetCollapse.classList.remove("show");
+          }
+        } else {
+          this.setAttribute("aria-expanded", "true");
+          if (targetCollapse) {
+            targetCollapse.classList.add("show");
+          }
+        }
+      });
+    });
+  });
+</script>

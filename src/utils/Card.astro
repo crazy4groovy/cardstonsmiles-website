@@ -1,0 +1,127 @@
+---
+interface Props {
+  question: string;
+  answer: string;
+  index: number;
+}
+
+const { question, answer, index } = Astro.props;
+const collapseId = `faq-collapse-${index}`;
+const headingId = `faq-heading-${index}`;
+---
+
+<div class="faq-item card shadow-sm mb-3 ftco-animate">
+  <div class="card-header" id={headingId}>
+    <h5 class="mb-0">
+      <button
+        class="faq-question w-100 text-left d-flex justify-content-between align-items-center"
+        type="button"
+        data-faq-toggle={collapseId}
+        aria-expanded="false"
+        aria-controls={collapseId}
+      >
+        <span class="question-text">{question}</span>
+        <span class="faq-icon">
+          <i class="ion-ios-add"></i>
+        </span>
+      </button>
+    </h5>
+  </div>
+  <div id={collapseId} class="faq-collapse" aria-labelledby={headingId}>
+    <div class="card-body">
+      <p class="faq-answer" set:html={answer} />
+    </div>
+  </div>
+</div>
+
+<style>
+  .faq-item {
+    border: none;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .faq-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  }
+
+  .faq-item .card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    padding: 0;
+  }
+
+  .faq-question {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 1.25rem;
+    border: none;
+    background: none;
+    outline: none;
+    box-shadow: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .faq-question:hover,
+  .faq-question:focus {
+    color: #24b776;
+    text-decoration: none;
+    box-shadow: none;
+    outline: none;
+  }
+
+  .faq-question[aria-expanded="true"] {
+    color: #24b776;
+  }
+
+  .faq-question[aria-expanded="true"] .faq-icon i {
+    transform: rotate(45deg);
+  }
+
+  .faq-icon {
+    font-size: 1.2rem;
+    color: #24b776;
+    transition: transform 0.3s ease;
+    min-width: 20px;
+    text-align: center;
+  }
+
+  .faq-icon i {
+    transition: transform 0.3s ease;
+  }
+
+  .card-body {
+    padding: 1.5rem;
+    background-color: #fff;
+  }
+
+  .faq-answer {
+    margin: 0;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  .faq-collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .faq-collapse.show {
+    max-height: 500px;
+    transition: max-height 0.5s ease-in;
+  }
+
+  .question-text {
+    flex: 1;
+    margin-right: 1rem;
+    text-align: left;
+  }
+</style>

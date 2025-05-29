@@ -1,4 +1,4 @@
-# Astro Starter Kit: Cardston Smiles
+# Astro Starter Kit: All Smiles (Cardston)
 
 ```sh
 npm create astro@latest -- --template basics

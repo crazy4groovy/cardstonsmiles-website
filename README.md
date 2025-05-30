@@ -1,4 +1,4 @@
-# Astro Starter Kit: All Smiles (Cardston)
+# Astro Starter Kit: All Smiles Dental (Cardston)
 
 ```sh
 npm create astro@latest -- --template basics

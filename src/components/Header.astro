@@ -68,9 +68,9 @@
     </button>
     <div class="collapse navbar-collapse" id="ftco-nav">
       <ul class="navbar-nav m-auto">
-        <li class="nav-item">
-          <a href="/" class="nav-link pl-0">Home</a>
-        </li>
+        <!-- <li class="nav-item">
+          <a href="/" class="nav-link">Home</a>
+        </li> -->
         <li class="nav-item">
           <a href="/team" class="nav-link">Our Team</a>
         </li>
@@ -143,5 +143,38 @@
   .header-with-sheen > .container {
     position: relative;
     z-index: 2;
+  }
+
+  /* Navigation hover effects */
+  .navbar-nav .nav-link {
+    position: relative;
+    transition: transform 0.2s ease;
+  }
+
+  /* Subtle scale on hover */
+  .navbar-nav .nav-item:hover .nav-link {
+    transform: scale(1);
+  }
+
+  /* Animated underline effect */
+  .navbar-nav .nav-link::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    top: 70px;
+    left: 50%;
+    width: 0;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(173, 216, 230, 0.8) 50%,
+      transparent 100%
+    );
+    transition: width 0.2s ease;
+    transform: translateX(-50%);
+  }
+
+  .navbar-nav .nav-item:hover .nav-link::before {
+    width: 50%;
   }
 </style>

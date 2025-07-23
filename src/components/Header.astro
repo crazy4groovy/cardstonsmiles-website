@@ -1,4 +1,4 @@
-<div class="py-md-5 py-4 border-bottom">
+<div class="py-md-5 py-4 border-bottom header-with-sheen">
   <div class="container">
     <div
       class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0"
@@ -100,5 +100,48 @@
 <style>
   .navbar-brand span {
     color: var(--color-accent);
+  }
+
+  .header-with-sheen {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header-with-sheen::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150px;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(
+      45deg,
+      transparent 0%,
+      rgba(173, 216, 230, 0.1) 25%,
+      rgba(173, 216, 230, 0.2) 50%,
+      rgba(173, 216, 230, 0.1) 75%,
+      transparent 100%
+    );
+    animation: sheen-sweep 10s infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  @keyframes sheen-sweep {
+    0% {
+      transform: translateX(-150px);
+    }
+    10% {
+      transform: translateX(calc(100vw + 150px));
+    }
+    100% {
+      transform: translateX(calc(100vw + 150px));
+    }
+  }
+
+  /* Ensure content stays above the sheen */
+  .header-with-sheen > .container {
+    position: relative;
+    z-index: 2;
   }
 </style>

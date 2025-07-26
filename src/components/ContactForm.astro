@@ -30,8 +30,9 @@
           </div>
         </form>
       </div>
-      <div class="col-md-6 d-flex align-items-stretch">
+      <div class="col-md-6 d-flex align-items-stretch p-5">
         <iframe
+          class="map-container"
           src="https://maps.google.com/maps?q=572+3+St+W,+Cardston,+AB+T0K+0K0&output=embed"
           width="100%"
           height="600"
@@ -45,3 +46,18 @@
     </div>
   </div>
 </section>
+
+<style>
+  .map-container {
+    animation: fadeIn 1s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+</style>

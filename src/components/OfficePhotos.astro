@@ -1,0 +1,118 @@
+---
+// Office photos data
+const officePhotos = [
+  {
+    image: "images/office/office-0c.jpg",
+    title: "Welcome / Check-In Area",
+  },
+  {
+    image: "images/office/office-1c.jpg",
+    title: "Modern Treatment Rooms",
+  },
+  {
+    image: "images/office/office-2c.jpg",
+    title: "Beautiful Cityscape Views",
+  },
+  {
+    image: "images/office/office-3c.jpg",
+    title: "Reception / Permits Area",
+  },
+  {
+    image: "images/office/office-4c.jpg",
+    title: "Comfortable Facilities",
+  },
+];
+---
+
+<section class="ftco-section bg-light">
+  <div class="container">
+    <!-- Office Photos Section -->
+    <div class="row justify-content-center mb-5 pb-3">
+      <div class="col-md-7 heading-section ftco-animate text-center">
+        <h2 class="mb-4">Our Modern Office</h2>
+        <p>
+          Take a look at our comfortable and state-of-the-art facilities
+          designed for your utmost care and comfort.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      {
+        officePhotos.map((photo) => (
+          <div class="col-md-6 col-lg-4 ftco-animate">
+            <div class="office-photo">
+              <div class="img-wrap d-flex align-items-stretch">
+                <div
+                  class="img align-self-stretch"
+                  style={`background-image: url(${photo.image});`}
+                />
+              </div>
+              <div class="text pt-3 text-center">
+                <h3>{photo.title}</h3>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .office-photo {
+    border-radius: 1em;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+
+  .office-photo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .office-photo .img-wrap {
+    height: 250px;
+    overflow: hidden;
+  }
+
+  .office-photo .img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+  }
+
+  .office-photo:hover .img {
+    transform: scale(1.05);
+  }
+
+  .office-photo .text {
+    padding: 1.5rem;
+  }
+
+  .office-photo h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0;
+  }
+
+  .office-photo .text {
+    background: #fff;
+  }
+
+  /* Ensure consistent height for cards */
+  .office-photo {
+    height: 100%;
+  }
+
+  /* Add some margin to the columns */
+  .col-md-6,
+  .col-lg-4 {
+    margin-bottom: 2rem;
+  }
+</style>

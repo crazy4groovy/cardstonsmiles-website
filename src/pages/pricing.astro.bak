@@ -10,7 +10,7 @@ import Footer from "../components/Footer.astro";
   <Header />
   <HeroInner
     title="Pricing"
-    breadcrumbs={[{name: "Home", url: "/"}, {name: "Pricing"}]}
+    breadcrumbs={[{ name: "Home", url: "/" }, { name: "Pricing" }]}
     backgroundImage="images/bg_1.jpg"
   />
   <PricingSection />

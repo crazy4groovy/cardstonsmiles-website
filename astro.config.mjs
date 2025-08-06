@@ -4,6 +4,10 @@ import react from "@astrojs/react";
 
 import favicons from "astro-favicons";
 
+import robotsTxt from "astro-robots-txt";
+
+import sitemap from "@astrojs/sitemap";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://cardstonsmiles.com",
@@ -18,5 +22,7 @@ export default defineConfig({
     favicons({
       input: { favicons: ["public/favicon.png"] },
     }),
+    robotsTxt(),
+    sitemap(),
   ],
 });

@@ -130,12 +130,18 @@
           <h2 id="appointment" class="ftco-heading-2">
             Request an Appointment
           </h2>
-          <form action="#" class="subscribe-form">
+          <form action="#" method="POST" class="subscribe-form">
             <div class="form-group">
               <input
                 type="text"
+                name="email"
                 class="form-control mb-2 text-center"
                 placeholder="Enter your email"
+              />
+              <input
+                type="hidden"
+                name="form-name"
+                value="footer-book-appointment"
               />
               <input
                 type="submit"
@@ -198,3 +204,12 @@
     color: rgba(255, 255, 255, 0.9);
   }
 </style>
+
+<script is:inline>
+  const form = document.querySelector("form");
+  const actionValue = "https://formsubmit.co/spam2steve(at)gmail.com".replace(
+    "(at)",
+    "@"
+  );
+  form.setAttribute("action", actionValue);
+</script>

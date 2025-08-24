@@ -65,7 +65,11 @@ const { title = "Your Family Dental Clinic" } = Astro.props;
       dataLayer.push(arguments);
     }
     gtag("js", new Date());
-    gtag("config", "G-9L39DZPVP2");
+    if (window.location.hostname === "cardstonsmiles.com") {
+      gtag("config", "G-SMMX6WBWJL"); // production
+    } else {
+      gtag("config", "G-9L39DZPVP2"); // staging
+    }
   </script>
 </html>
 

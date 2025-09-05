@@ -64,6 +64,7 @@ AOS.init({
     });
     $(".carousel-testimony").owlCarousel({
       autoplay: true,
+      autoplayTimeout: 15000,
       center: true,
       loop: true,
       items: 1,

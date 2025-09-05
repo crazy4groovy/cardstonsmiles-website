@@ -1,6 +1,7 @@
 ---
 import Main from "../layouts/Main.astro";
-import Header from "../components/Header.astro";
+// import Header from "../components/Header.astro";
+import Header from "../components/HeaderText.astro";
 import HeroInner from "../components/HeroInner.astro";
 import ContactForm from "../components/ContactForm.astro";
 import ContactInfo from "../components/ContactInfo.astro";
@@ -11,7 +12,7 @@ import Footer from "../components/Footer.astro";
   <Header />
   <HeroInner
     title="Contact Us"
-    breadcrumbs={[{name: "Home", url: "/"}, {name: "Contact"}]}
+    breadcrumbs={[{ name: "Home", url: "/" }, { name: "Contact" }]}
     backgroundImage="images/bg_1.jpg"
   />
   <ContactForm />

@@ -29,7 +29,7 @@
         </div>
         <div class="pr-md-4 pl-md-0 pl-3 text">
           <p class="con">
-            <span>(403) 653-4121</span>
+            <a href="tel:+14036534121"><span>(403) 653-4121</span></a>
           </p>
           <p class="con">572 3 St W<br />Cardston, AB</p>
         </div>
@@ -42,9 +42,9 @@
           <p class="hr"><span>Office Hours</span></p>
           <p class="time">
             <span>Mon - Thurs:</span>
-            <span>8am - 5pm</span><br />
+            <span>9am - 5pm</span><br />
             <span>Fri:</span>
-            <span>8am - 2:30pm</span><br />
+            <span>9am - 2:30pm</span><br />
             <span>Sat - Sun:</span>
             <span>Closed</span>
           </p>
@@ -71,9 +71,9 @@
     </button>
     <div class="collapse navbar-collapse" id="ftco-nav">
       <ul class="navbar-nav m-auto">
-        <!-- <li class="nav-item">
+        <li class="nav-item">
           <a href="/" class="nav-link">Home</a>
-        </li> -->
+        </li>
         <li class="nav-item">
           <a href="/team" class="nav-link">Meet Our Doctors</a>
         </li>
@@ -163,10 +163,12 @@
   .navbar-nav .nav-link::before {
     content: "";
     position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
     height: 2px;
-    top: 70px;
-    left: 50%;
     width: 0;
+    margin: 0 auto;
     background: linear-gradient(
       90deg,
       transparent 0%,
@@ -174,10 +176,9 @@
       transparent 100%
     );
     transition: width 0.2s ease;
-    transform: translateX(-50%);
   }
 
   .navbar-nav .nav-item:hover .nav-link::before {
-    width: 50%;
+    width: 100%;
   }
 </style>

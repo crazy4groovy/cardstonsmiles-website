@@ -5,6 +5,7 @@ AOS.init({
 
 (function ($) {
   "use strict";
+  console.log("main.js loaded");
 
   $(window).stellar({
     responsive: true,
@@ -116,43 +117,67 @@ AOS.init({
     console.log("show");
   });
 
-  // scroll
+  // scroll with intersection observer
   var scrollWindow = function () {
-    $(window).scroll(function () {
-      var $w = $(this),
-        st = $w.scrollTop(),
-        navbar = $(".ftco_navbar"),
-        sd = $(".js-scroll-wrap");
+    var navbar = $("#ftco-nav");
+    var sd = $(".js-scroll-wrap");
+    // Create sentinel elements for different scroll thresholds
+    var sentinel150 = $(
+      '<div style="position: absolute; top: 150px; height: 1px; width: 1px; pointer-events: none;"></div>'
+    );
+    var sentinel350 = $(
+      '<div style="position: absolute; top: 350px; height: 1px; width: 1px; pointer-events: none;"></div>'
+    );
+    $("body").append(sentinel150, sentinel350);
+    // Observer for 150px threshold
+    var observer150 = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            // Scrolled past 150px (going down)
+            if (!navbar.hasClass("scrolled")) {
+              navbar.addClass("scrolled");
+            }
+          } else {
+            // Above 150px (going up)
+            if (navbar.hasClass("scrolled")) {
+              navbar.removeClass("scrolled sleep");
+            }
+          }
+        });
+      },
+      { rootMargin: "0px", threshold: 0 }
+    );
+    // Observer for 350px threshold
+    var observer350 = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            // Scrolled past 350px (going down)
+            if (!navbar.hasClass("awake")) {
+              navbar.addClass("awake");
+            }
+            if (sd.length > 0) {
+              sd.addClass("sleep");
+            }
+          } else {
+            // Above 350px (going up)
+            if (navbar.hasClass("awake")) {
+              navbar.removeClass("awake");
+              navbar.addClass("sleep");
+            }
+            if (sd.length > 0) {
+              sd.removeClass("sleep");
+            }
+          }
+        });
+      },
+      { rootMargin: "0px", threshold: 0 }
+    );
 
-      if (st > 150) {
-        if (!navbar.hasClass("scrolled")) {
-          navbar.addClass("scrolled");
-        }
-      }
-      if (st < 150) {
-        if (navbar.hasClass("scrolled")) {
-          navbar.removeClass("scrolled sleep");
-        }
-      }
-      if (st > 350) {
-        if (!navbar.hasClass("awake")) {
-          navbar.addClass("awake");
-        }
-
-        if (sd.length > 0) {
-          sd.addClass("sleep");
-        }
-      }
-      if (st < 350) {
-        if (navbar.hasClass("awake")) {
-          navbar.removeClass("awake");
-          navbar.addClass("sleep");
-        }
-        if (sd.length > 0) {
-          sd.removeClass("sleep");
-        }
-      }
-    });
+    // Start observing the sentinel elements
+    observer150.observe(sentinel150[0]);
+    observer350.observe(sentinel350[0]);
   };
   scrollWindow();
 

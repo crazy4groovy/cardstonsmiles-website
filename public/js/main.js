@@ -5,7 +5,7 @@ AOS.init({
 
 (function ($) {
   "use strict";
-  console.log("main.js loaded");
+  const isMobile = window.innerWidth < 600;
 
   $(window).stellar({
     responsive: true,
@@ -39,53 +39,44 @@ AOS.init({
 
   var carousel = function () {
     $(".home-slider").owlCarousel({
-      loop: true,
-      autoplay: true,
-      margin: 0,
-      animateOut: "fadeOut",
       animateIn: "fadeIn",
-      nav: false,
-      autoplayHoverPause: false,
+      animateOut: "fadeOut",
+      autoplay: !isMobile,
+      autoplayTimeout: 8000,
+      autoplayHoverPause: true,
       items: 1,
+      loop: true,
+      margin: 0,
+      nav: false,
       navText: [
         "<span class='ion-md-arrow-back'></span>",
         "<span class='ion-chevron-right'></span>",
       ],
       responsive: {
-        0: {
-          items: 1,
-        },
-        600: {
-          items: 1,
-        },
-        1000: {
-          items: 1,
-        },
+        0: { items: 1 },
+        600: { items: 1 },
+        900: { items: 1 },
       },
     });
+
     $(".carousel-testimony").owlCarousel({
-      autoplay: true,
+      autoplay: !isMobile,
       autoplayTimeout: 15000,
+      autoplayHoverPause: true,
       center: true,
-      loop: true,
       items: 1,
-      margin: 30,
-      stagePadding: 0,
+      loop: true,
+      margin: 10,
       nav: false,
+      stagePadding: 0,
       navText: [
         '<span class="ion-ios-arrow-back">',
         '<span class="ion-ios-arrow-forward">',
       ],
       responsive: {
-        0: {
-          items: 1,
-        },
-        600: {
-          items: 2,
-        },
-        1000: {
-          items: 2,
-        },
+        0: { items: 1 },
+        600: { items: 2 },
+        900: { items: 3 },
       },
     });
   };
@@ -94,7 +85,7 @@ AOS.init({
   $("nav .dropdown").hover(
     function () {
       var $this = $(this);
-      // 	 timer;
+      // timer;
       // clearTimeout(timer);
       $this.addClass("show");
       $this.find("> a").attr("aria-expanded", true);

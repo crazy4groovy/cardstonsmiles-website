@@ -277,4 +277,11 @@ AOS.init({
   });
 
   $(".appointment_time").timepicker();
+
+  // Hide hero on mobile after short delay
+  if (isMobile) {
+    setTimeout(function () {
+      $("#hero").hide();
+    }, 10);
+  }
 })(jQuery);

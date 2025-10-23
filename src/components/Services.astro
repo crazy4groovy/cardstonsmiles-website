@@ -16,14 +16,15 @@
           <div class="text-center">
             <h3 class="mb-4">Free Consultation</h3>
           </div>
-          <form
-            action="https://formsubmit.co/spam2steve@gmail.com"
-            method="POST"
-            class="appointment-form"
-          >
+          <form action="#" method="POST" class="appointment-form">
             <div class="row">
               <div class="col-md-12 col-lg-6 col-xl-4">
                 <div class="form-group">
+                  <input
+                    type="hidden"
+                    name="form-name"
+                    value="services-book-appointment"
+                  />
                   <input
                     type="text"
                     name="fname"
@@ -115,3 +116,10 @@
     </div>
   </div>
 </section>
+
+<script is:inline>
+  const form = document.querySelector("form");
+  const actionValue =
+    "https://formsubmit.co/cardstonsmiles(at)gmail.com".replace("(at)", "@");
+  form.setAttribute("action", actionValue);
+</script>

@@ -220,9 +220,15 @@
 
 <script is:inline>
   const form = document.querySelector("form");
-  const actionValue =
-    "https://formsubmit.co/cardstonsmiles(at)gmail.com".replace("(at)", "@");
+  const actionValue = "https://api.web3forms.com/submit";
+  // "https://formsubmit.co/cardstonsmiles(at)gmail.com".replace("(at)", "@");
   form.setAttribute("action", actionValue);
+  // Add hidden input for Web3Forms access key
+  const hiddenInput = document.createElement("input");
+  hiddenInput.type = "hidden";
+  hiddenInput.name = "access_key";
+  hiddenInput.value = "c176fd7c-b482-4f95-8526-235110e7fd2c";
+  form.appendChild(hiddenInput);
 
   // copyright year
   document.querySelector(".copyright-year").textContent = new Date()

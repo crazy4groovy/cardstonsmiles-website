@@ -10,9 +10,42 @@
         class="row no-gutters slider-text align-items-center justify-content-end"
         data-scrollax-parent="true"
       >
+        <div class="col-md-6 text ftco-animate center">
+          <h1 class="mb-4">
+            We want to see you smile <span id="smile-icon">:)</span>
+          </h1>
+          <div class="center">
+            <img
+              src="/logo1.jpg"
+              alt="All Smiles Dental"
+              class="img-fluid"
+              style="height: 180px; width: auto;"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="slider-item"
+    style="background-image: url(/images/bg_1.jpg)"
+    data-stellar-background-ratio="0.5"
+  >
+    <div class="overlay"></div>
+    <div class="container">
+      <div
+        class="row no-gutters slider-text align-items-center justify-content-end"
+        data-scrollax-parent="true"
+      >
         <div class="col-md-6 text ftco-animate">
           <h1 class="mb-4">Care. Comfort. Confidence.</h1>
           <h3 class="subheading">
+            <!-- <img
+              src="/logo1.jpg"
+              alt="All Smiles Dental"
+              class="img-fluid"
+              style="height: 120px; width: auto;"
+            /> -->
             Providing Comprehensive Dental Care for the Whole Family
           </h3>
           <p>
@@ -100,6 +133,23 @@
     .owl-carousel.home-slider,
     .owl-carousel.home-slider .slider-item {
       height: 500px !important;
+    }
+  }
+  #smile-icon {
+    display: inline-block;
+    font-size: 2rem;
+    font-family: "Comic Sans MS", Arial, Helvetica, sans-serif;
+    color: var(--color-accent);
+    padding-left: 10px;
+    transform: translateY(-10px);
+    animation: smile 2s infinite;
+  }
+  @keyframes smile {
+    0% {
+      transform: rotate(0deg) translateY(-10px);
+    }
+    50% {
+      transform: rotate(20deg) translateY(-10px);
     }
   }
 </style>
